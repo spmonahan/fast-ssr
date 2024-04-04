@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
       "pretty": true,
-      "target": "ES2015",
+      "target": "esnext",
       "module": "esnext",
       "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
+      "moduleResolution": "bundler",
       "importHelpers": true,
       "experimentalDecorators": true,
       "declaration": true,

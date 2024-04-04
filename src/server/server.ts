@@ -4,7 +4,10 @@ import useragent from "express-useragent";
 import { join, dirname } from "path";
 import { fileURLToPath } from 'url';
 import { Server } from 'http';
-import { templateRenderer, RequestStorageManager } from './ssr';
+import { templateRenderer, RequestStorageManager } from './ssr.js';
+
+import { MyElement } from "../elements/MyElement.js";
+MyElement;
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -42,7 +45,14 @@ export const startServer = () => {
     app.use(express.json());
 
     app.get('/fast-ssr.html', (_req, res) => {
-      res.render('fast-ssr', { template: templateRenderer.render('<div>a div</div>')});
+      
+      const result = templateRenderer.render('<my-element></my-element>');
+      let template = '';
+      for (const part of result) {
+        template += part;
+      }
+
+      res.render('fast-ssr', { template });
     });
 
     process.on('uncaughtException', handleGracefulShutdown);
@@ -59,3 +69,5 @@ export const stopServer = () => {
 
     server.close();
 };
+
+startServer();

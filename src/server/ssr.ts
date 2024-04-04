@@ -1,7 +1,8 @@
+import "@microsoft/fast-ssr/install-dom-shim.js";
 import {
     createWindow,
     installWindowOnGlobal,
-} from '@microsoft/fast-ssr/install-dom-shim.js';
+} from '@microsoft/fast-ssr/dom-shim';
 import fastSSR, { RequestStorageManager } from "@microsoft/fast-ssr";
 
 installWindowOnGlobal(createWindow({ isSSR: true }));
