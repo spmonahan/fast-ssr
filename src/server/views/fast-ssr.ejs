@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>FAST SSR</title>
+        <title><%- title %></title>
+        <script type="importmap">
+        {
+            "imports": {
+                "@microsoft/fast-element": "/node_modules/@microsoft/fast-element/dist/fast-element.js",
+                "tslib": "/node_modules/tslib/tslib.es6.mjs"
+            }
+        }
+        </script>
     </head>
     <body>
         <%- template %>
+        <script type="module" src="/elements/MyElement.js"></script>
+        <script type="module" src="/elements/MyStyledElement.js"></script>
+        <script type="module" src="/elements/MyContainerElement.js"></script>
     </body>
 </html>

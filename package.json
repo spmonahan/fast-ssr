@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "rimraf dist/ && tsc && node ./scripts/copyFiles.cjs",
-    "serve": "node ./dist/build/server/server.js",
+    "serve": "node ./dist/server/server.js",
     "postinstall": "patch-package"
   },
   "dependencies": {

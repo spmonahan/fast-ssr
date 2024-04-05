@@ -12,7 +12,7 @@
       "sourceMap": true,
       "noEmitOnError": true,
       "strict": true,
-      "outDir": "dist/build",
+      "outDir": "dist",
       "rootDir": "src",
       "lib": [
         "dom",
@@ -21,5 +21,5 @@
     },
     "include": [
       "src"
-, "src/server/ssr.ts"    ]
+    ]
   }
