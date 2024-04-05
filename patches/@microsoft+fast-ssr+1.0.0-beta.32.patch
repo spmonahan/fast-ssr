@@ -1,0 +1,13 @@
+diff --git a/node_modules/@microsoft/fast-ssr/dist/esm/template-renderer/template-renderer.js b/node_modules/@microsoft/fast-ssr/dist/esm/template-renderer/template-renderer.js
+index 1843cd6..8d69b9b 100644
+--- a/node_modules/@microsoft/fast-ssr/dist/esm/template-renderer/template-renderer.js
++++ b/node_modules/@microsoft/fast-ssr/dist/esm/template-renderer/template-renderer.js
+@@ -114,7 +114,7 @@ export class DefaultTemplateRenderer {
+                         ((_a = FASTElementDefinition.getByType(ctor)) === null || _a === void 0 ? void 0 : _a.shadowOptions) ===
+                             undefined;
+                     if (!skipDSD) {
+-                        yield '<template shadowroot="open">';
++                        yield '<template shadowrootmode="open">';
+                     }
+                     const content = currentRenderer.renderShadow(renderInfo);
+                     if (content) {
